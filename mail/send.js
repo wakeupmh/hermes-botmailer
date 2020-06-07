@@ -3,15 +3,10 @@ import { credentials } from '../config'
 
 const transporter = nodemailer.createTransport(
   {
-    host: credentials.host,
-    port: credentials.port,
-    secure: credentials.secure,
+    service:'hotmail',
     auth: {
       user: credentials.user,
       pass: credentials.pass,
-    },
-    tls: {
-      rejectUnauthorized: false,
     }
   }
 )
