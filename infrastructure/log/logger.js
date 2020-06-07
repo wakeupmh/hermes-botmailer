@@ -6,7 +6,7 @@ const { Console } = transports
 const Logger = createLogger({
   level: 'info',
   defaultMeta: {
-    projectLabel: 'Eligibility Worker'
+    projectLabel: 'send-mail'
   },
   exitOnError: false,
   transports: [

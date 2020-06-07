@@ -2,7 +2,7 @@ export const handleSuccessResponse = response => ([message]) => response.status(
 
 export const handleErrorResponse = (response, Logger) => error => {
   if (error.code) {
-    return response.status(error.code)
+    return response.status(error.code)  
       .json({
         error: error.errors
       })
@@ -10,9 +10,9 @@ export const handleErrorResponse = (response, Logger) => error => {
 
   Logger.error(error.cause)
 
-  return response.status()
+  return response.status(500)
     .json({
       code: 500,
-      error: 'Ocorreu um erro de conectividade com a opera  dora, favor tente mais tarde!'
+      error: 'Ocorreu um erro de conectividade com o servior, tente novamente mais tarde'
     })
 }
