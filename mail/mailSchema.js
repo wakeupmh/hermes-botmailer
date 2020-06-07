@@ -14,7 +14,6 @@ const subject = yup.string().required()
 
 const name = yup.string().required()
 
-const email = yup.string().required()
 
 const to = yup.string().required()
 
@@ -22,6 +21,5 @@ export const mailSchema = yup.object().shape({
   text,
   subject,
   name,
-  email,
   to
 }).label('payload')

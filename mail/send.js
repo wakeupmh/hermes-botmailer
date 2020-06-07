@@ -1,4 +1,3 @@
-import Bluebird from 'bluebird'
 import nodemailer from 'nodemailer'
 import { credentials } from '../config'
 
@@ -12,17 +11,18 @@ const transporter = nodemailer.createTransport(
       pass: credentials.pass,
     },
     tls: {
-      rejectUnauthorized: false
+      rejectUnauthorized: false,
+      ciphers:'SSLv3'
     }
   }
 )
 
-export const sendMail = async ({ text, subject, name, email, to}) => 
+export const sendMail = async ({ text, subject, name, to}) => 
   await transporter.sendMail(
     {
       text,
       subject,
-      from: `${name} <${email}`,
+      from: `${name} <${credentials.user}>`,
       to
     }
   )
