@@ -1,4 +1,4 @@
-export const handleSuccessResponse = response => ([message]) => response.status(200).json(message)
+export const handleSuccessResponse = response => message => response.status(200).json(message)
 
 export const handleErrorResponse = (response, Logger) => error => {
   if (error.code) {

@@ -1,4 +1,4 @@
-export const credentials = () => Object.freeze({
+export const credentials = Object.freeze({
   host: process.env.HOST,
   port: process.env.PORT,
   secure: process.env.SECURE,
