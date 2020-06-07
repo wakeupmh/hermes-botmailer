@@ -3,6 +3,5 @@ export const credentials = () => Object.freeze({
   port: process.env.PORT,
   secure: process.env.SECURE,
   user: process.env.USER,
-  pass: process.env.PASS,
-  drellMail: process.env.DRELLMAIL
+  pass: process.env.PASS
 })
