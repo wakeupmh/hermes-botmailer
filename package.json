@@ -2,6 +2,14 @@
   "name": "send-mail",
   "version": "1.0.0",
   "author": "@wakeupmh",
+  "scripts": {
+    "cz": "git-cz"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
   "devDependencies": {
     "cz-conventional-changelog": "^3.2.0"
   },
@@ -12,3 +20,4 @@
     "yup": "^0.29.1"
   }
 }
+

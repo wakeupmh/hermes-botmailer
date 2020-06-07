@@ -24,6 +24,6 @@ export const sendMail = async ({ text, subject, name, email, to}) =>
       to
     }
   ))
-  .then(() => true)
-  .catch(() => false)
+  .then(() => ({send: true}))
+  .catch(() => ({error: true, send: false}))
 
